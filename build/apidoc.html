@@ -1,0 +1,884 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/reducejs/gulp.spritesmith-multi#readme"
+
+    >gulp.spritesmith-multi (v3.1.0)</a>
+</h1>
+<h4>A wrapper for gulp.spritesmith to generate multiple sprites and stylesheets</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi">module gulp.spritesmith-multi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi">
+            function <span class="apidocSignatureSpan">gulp.</span>spritesmith-multi
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.css">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.builtin.css
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.responsiveCss">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.builtin.responsiveCss
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.toString">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.addPseudoClass">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.addPseudoClass
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.createTemplate">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.createTemplate
+            <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.generatePercentage">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.generatePercentage
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.toString">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>builtin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.builtin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.builtin">module gulp.spritesmith-multi.builtin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.builtin.css">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>css
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>responsiveCss
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.builtin.css">module gulp.spritesmith-multi.builtin.css</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.builtin.css.css">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>css
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.builtin.responsiveCss">module gulp.spritesmith-multi.builtin.responsiveCss</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss.responsiveCss">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>responsiveCss
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.toString">module gulp.spritesmith-multi.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.toString.toString">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.util">module gulp.spritesmith-multi.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.addPseudoClass">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>addPseudoClass
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.createTemplate">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>createTemplate
+            <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.generatePercentage">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>generatePercentage
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.util.addPseudoClass">module gulp.spritesmith-multi.util.addPseudoClass</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.addPseudoClass.addPseudoClass">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>addPseudoClass
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.util.createTemplate">module gulp.spritesmith-multi.util.createTemplate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.createTemplate.createTemplate">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>createTemplate
+            <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith-multi.util.generatePercentage">module gulp.spritesmith-multi.util.generatePercentage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.spritesmith-multi.util.generatePercentage.generatePercentage">
+            function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>generatePercentage
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi" id="apidoc.module.gulp.spritesmith-multi">module gulp.spritesmith-multi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi">
+        function <span class="apidocSignatureSpan">gulp.</span>spritesmith-multi
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gulpSpritesmith(opts) {
+  opts = opts || {}
+
+  var groups = {}
+  var output = thr.obj(write, end)
+  var wait = thr.obj()
+  var imgStream = output.img = merge(wait)
+  var cssStream = output.css = merge(wait)
+
+  function to(file) {
+    if (typeof opts.to === &#x27;string&#x27;) {
+      return opts.to
+    }
+    if (typeof opts.to === &#x27;function&#x27;) {
+      return opts.to(file)
+    }
+    return path.basename(
+      path.dirname(file)
+    )
+  }
+
+  function write(file, _, next) {
+    var sprite = to(file.path)
+    groups[sprite] = groups[sprite] || []
+    groups[sprite].push(file)
+    next()
+  }
+
+  function end(done) {
+    wait.end()
+    var sprites = Object.keys(groups)
+    if (sprites.length === 0) {
+      return done()
+    }
+
+    sprites.forEach(function (sprite) {
+      var icons = groups[sprite]
+      var options = filterSmithOption(
+        createSmithOption(sprite, icons),
+        opts.spritesmith, sprite, icons
+      )
+      var gulpSpriteStream = spritesmith(options)
+
+      imgStream.add(gulpSpriteStream.img)
+      cssStream.add(gulpSpriteStream.css)
+
+      gulpSpriteStream.on(&#x27;error&#x27;, errorHandler(output, sprite))
+      gulpSpriteStream.img.on(&#x27;error&#x27;, errorHandler(imgStream, sprite))
+      gulpSpriteStream.css.on(&#x27;error&#x27;, errorHandler(cssStream, sprite))
+
+      icons.forEach(function (icon) {
+        gulpSpriteStream.write(icon)
+      })
+      gulpSpriteStream.end()
+    })
+
+    merge(imgStream, cssStream)
+      .on(&#x27;error&#x27;, done)
+      .on(&#x27;data&#x27;, function (file) {
+        output.push(file)
+      })
+      .on(&#x27;end&#x27;, done)
+  }
+
+  return output
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.css" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.css">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.builtin.css
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.builtin.css = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.responsiveCss" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.builtin.responsiveCss">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.builtin.responsiveCss
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.builtin.responsiveCss = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.toString" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.toString">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.addPseudoClass" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.addPseudoClass">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.addPseudoClass
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.util.addPseudoClass = function (data) {
+  var pseudoPat = /--(\w+)$/
+  data.sprites.forEach(function (sprite) {
+    var name = sprite.name
+    var matches = name.match(pseudoPat)
+    if (matches &#x26;&#x26; matches[1]) {
+      sprite.name = name.slice(0, -1 * (matches[1].length + 2))
+      sprite.pseudo_class = &#x27;:&#x27; + matches[1]
+    }
+  })
+  return data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.createTemplate" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.createTemplate">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.createTemplate
+        <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.util.createTemplate = function (tplInfo, filter) {
+  if (typeof tplInfo === &#x27;string&#x27;) {
+    tplInfo = { file: tplInfo }
+  }
+
+  var tmpl = tplInfo.source
+  if (typeof tplInfo.source !== &#x27;string&#x27;) {
+    tmpl = fs.readFileSync(tplInfo.file, &#x27;utf8&#x27;)
+  }
+
+  if (tplInfo.name) {
+    handlebars.registerPartial(tplInfo.name, tmpl)
+  }
+
+  var templater = handlebars.compile(tmpl)
+
+  filter = [].concat(filter).filter(Boolean)
+
+  return function (data) {
+    data = filter.reduce(function (o, f) {
+      return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+    }, data)
+    return templater(data)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.generatePercentage" id="apidoc.element.gulp.spritesmith-multi.spritesmith-multi.util.generatePercentage">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>spritesmith-multi.util.generatePercentage
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spritesmith-multi.util.generatePercentage = function (data) {
+  data.sprites.forEach(function(sprite) {
+    var offset_x = 100 * sprite.x / (sprite.total_width - sprite.width)
+    var offset_y = 100 * sprite.y / (sprite.total_height - sprite.height)
+    var size = 100 * sprite.total_width / sprite.width
+
+    offset_x = offset_x &#x26;&#x26; Number.isFinite(offset_x) ? offset_x.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    offset_y = offset_y &#x26;&#x26; Number.isFinite(offset_y) ? offset_y.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    size = size ? size.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+
+    sprite.percentage = {
+      offset_x: offset_x,
+      offset_y: offset_y,
+      size: size,
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.toString" id="apidoc.element.gulp.spritesmith-multi.toString">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.builtin" id="apidoc.module.gulp.spritesmith-multi.builtin">module gulp.spritesmith-multi.builtin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.builtin.css" id="apidoc.element.gulp.spritesmith-multi.builtin.css">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>css
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">css = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss" id="apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>responsiveCss
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">responsiveCss = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.builtin.css" id="apidoc.module.gulp.spritesmith-multi.builtin.css">module gulp.spritesmith-multi.builtin.css</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.builtin.css.css" id="apidoc.element.gulp.spritesmith-multi.builtin.css.css">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>css
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">css = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.builtin.responsiveCss" id="apidoc.module.gulp.spritesmith-multi.builtin.responsiveCss">module gulp.spritesmith-multi.builtin.responsiveCss</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss.responsiveCss" id="apidoc.element.gulp.spritesmith-multi.builtin.responsiveCss.responsiveCss">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.builtin.</span>responsiveCss
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">responsiveCss = function (data) {
+  data = filter.reduce(function (o, f) {
+    return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+  }, data)
+  return templater(data)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.toString" id="apidoc.module.gulp.spritesmith-multi.toString">module gulp.spritesmith-multi.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.toString.toString" id="apidoc.element.gulp.spritesmith-multi.toString.toString">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.util" id="apidoc.module.gulp.spritesmith-multi.util">module gulp.spritesmith-multi.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.addPseudoClass" id="apidoc.element.gulp.spritesmith-multi.util.addPseudoClass">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>addPseudoClass
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addPseudoClass = function (data) {
+  var pseudoPat = /--(\w+)$/
+  data.sprites.forEach(function (sprite) {
+    var name = sprite.name
+    var matches = name.match(pseudoPat)
+    if (matches &#x26;&#x26; matches[1]) {
+      sprite.name = name.slice(0, -1 * (matches[1].length + 2))
+      sprite.pseudo_class = &#x27;:&#x27; + matches[1]
+    }
+  })
+  return data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.createTemplate" id="apidoc.element.gulp.spritesmith-multi.util.createTemplate">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>createTemplate
+        <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTemplate = function (tplInfo, filter) {
+  if (typeof tplInfo === &#x27;string&#x27;) {
+    tplInfo = { file: tplInfo }
+  }
+
+  var tmpl = tplInfo.source
+  if (typeof tplInfo.source !== &#x27;string&#x27;) {
+    tmpl = fs.readFileSync(tplInfo.file, &#x27;utf8&#x27;)
+  }
+
+  if (tplInfo.name) {
+    handlebars.registerPartial(tplInfo.name, tmpl)
+  }
+
+  var templater = handlebars.compile(tmpl)
+
+  filter = [].concat(filter).filter(Boolean)
+
+  return function (data) {
+    data = filter.reduce(function (o, f) {
+      return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+    }, data)
+    return templater(data)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  spritesmith: function (options, sprite, icons){
+    if (sprite.indexOf(&#x27;hover--&#x27;) !== -1) {
+      options.cssTemplate = themeTemplate
+    }
+    return options
+  },
+}
+var themeTemplate = util.<span class="apidocCodeKeywordSpan">createTemplate</span>(
+  path.join(__dirname, &#x27;template&#x27;, &#x27;css.hbs&#x27;),
+  [addTheme, util.addPseudoClass]
+)
+function addTheme(data) {
+  var info = data.spritesheet_info
+  var match = info.name.match(/hover--(\w+)/)
+  data.theme = match &#x26;&#x26; match[1]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.generatePercentage" id="apidoc.element.gulp.spritesmith-multi.util.generatePercentage">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>generatePercentage
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generatePercentage = function (data) {
+  data.sprites.forEach(function(sprite) {
+    var offset_x = 100 * sprite.x / (sprite.total_width - sprite.width)
+    var offset_y = 100 * sprite.y / (sprite.total_height - sprite.height)
+    var size = 100 * sprite.total_width / sprite.width
+
+    offset_x = offset_x &#x26;&#x26; Number.isFinite(offset_x) ? offset_x.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    offset_y = offset_y &#x26;&#x26; Number.isFinite(offset_y) ? offset_y.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    size = size ? size.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+
+    sprite.percentage = {
+      offset_x: offset_x,
+      offset_y: offset_y,
+      size: size,
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.util.addPseudoClass" id="apidoc.module.gulp.spritesmith-multi.util.addPseudoClass">module gulp.spritesmith-multi.util.addPseudoClass</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.addPseudoClass.addPseudoClass" id="apidoc.element.gulp.spritesmith-multi.util.addPseudoClass.addPseudoClass">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>addPseudoClass
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addPseudoClass = function (data) {
+  var pseudoPat = /--(\w+)$/
+  data.sprites.forEach(function (sprite) {
+    var name = sprite.name
+    var matches = name.match(pseudoPat)
+    if (matches &#x26;&#x26; matches[1]) {
+      sprite.name = name.slice(0, -1 * (matches[1].length + 2))
+      sprite.pseudo_class = &#x27;:&#x27; + matches[1]
+    }
+  })
+  return data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.util.createTemplate" id="apidoc.module.gulp.spritesmith-multi.util.createTemplate">module gulp.spritesmith-multi.util.createTemplate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.createTemplate.createTemplate" id="apidoc.element.gulp.spritesmith-multi.util.createTemplate.createTemplate">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>createTemplate
+        <span class="apidocSignatureSpan">(tplInfo, filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTemplate = function (tplInfo, filter) {
+  if (typeof tplInfo === &#x27;string&#x27;) {
+    tplInfo = { file: tplInfo }
+  }
+
+  var tmpl = tplInfo.source
+  if (typeof tplInfo.source !== &#x27;string&#x27;) {
+    tmpl = fs.readFileSync(tplInfo.file, &#x27;utf8&#x27;)
+  }
+
+  if (tplInfo.name) {
+    handlebars.registerPartial(tplInfo.name, tmpl)
+  }
+
+  var templater = handlebars.compile(tmpl)
+
+  filter = [].concat(filter).filter(Boolean)
+
+  return function (data) {
+    data = filter.reduce(function (o, f) {
+      return typeof f === &#x27;function&#x27; ? f(o) || o : mix(o, f)
+    }, data)
+    return templater(data)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  spritesmith: function (options, sprite, icons){
+    if (sprite.indexOf(&#x27;hover--&#x27;) !== -1) {
+      options.cssTemplate = themeTemplate
+    }
+    return options
+  },
+}
+var themeTemplate = util.<span class="apidocCodeKeywordSpan">createTemplate</span>(
+  path.join(__dirname, &#x27;template&#x27;, &#x27;css.hbs&#x27;),
+  [addTheme, util.addPseudoClass]
+)
+function addTheme(data) {
+  var info = data.spritesheet_info
+  var match = info.name.match(/hover--(\w+)/)
+  data.theme = match &#x26;&#x26; match[1]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.spritesmith-multi.util.generatePercentage" id="apidoc.module.gulp.spritesmith-multi.util.generatePercentage">module gulp.spritesmith-multi.util.generatePercentage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.spritesmith-multi.util.generatePercentage.generatePercentage" id="apidoc.element.gulp.spritesmith-multi.util.generatePercentage.generatePercentage">
+        function <span class="apidocSignatureSpan">gulp.spritesmith-multi.util.</span>generatePercentage
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generatePercentage = function (data) {
+  data.sprites.forEach(function(sprite) {
+    var offset_x = 100 * sprite.x / (sprite.total_width - sprite.width)
+    var offset_y = 100 * sprite.y / (sprite.total_height - sprite.height)
+    var size = 100 * sprite.total_width / sprite.width
+
+    offset_x = offset_x &#x26;&#x26; Number.isFinite(offset_x) ? offset_x.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    offset_y = offset_y &#x26;&#x26; Number.isFinite(offset_y) ? offset_y.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+    size = size ? size.toFixed(5).replace(/\.?0*$/, &#x27;%&#x27;) : 0
+
+    sprite.percentage = {
+      offset_x: offset_x,
+      offset_y: offset_y,
+      size: size,
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
