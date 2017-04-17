@@ -1,1 +1,39 @@
-{     "devDependencies": {         "gulp.spritesmith-multi": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-gulp.spritesmith-multi",     "homepage": "https://github.com/npmdoc/node-npmdoc-gulp.spritesmith-multi",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-gulp.spritesmith-multi.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [gulp.spritesmith-multi (v3.1.0)](https://github.com/reducejs/gulp.spritesmith-multi#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp.spritesmith-multi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp.spritesmith-multi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp.spritesmith-multi": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-gulp.spritesmith-multi",
+    "keywords": [
+        "documentation",
+        "gulp.spritesmith-multi"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_gulp.spritesmith_multi.js",
+    "name": "npmdoc-gulp.spritesmith-multi",
+    "nameAlias": "npmdoc_gulp_spritesmith_multi",
+    "nameOriginal": "npmdoc-gulp.spritesmith-multi",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-gulp.spritesmith-multi.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
