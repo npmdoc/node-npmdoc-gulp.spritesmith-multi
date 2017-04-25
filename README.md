@@ -1,4 +1,7 @@
-# api documentation for  [gulp.spritesmith-multi (v3.1.0)](https://github.com/reducejs/gulp.spritesmith-multi#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp.spritesmith-multi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp.spritesmith-multi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi)
+# npmdoc-gulp.spritesmith-multi
+
+#### basic api documentation for  [gulp.spritesmith-multi (v3.1.0)](https://github.com/reducejs/gulp.spritesmith-multi#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp.spritesmith-multi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp.spritesmith-multi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp.spritesmith-multi)
+
 #### A wrapper for gulp.spritesmith to generate multiple sprites and stylesheets
 
 [![NPM](https://nodei.co/npm/gulp.spritesmith-multi.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp.spritesmith-multi)
@@ -73,7 +76,8 @@
         "lint": "eslint *.js 'lib/**/*.js' test/*.js bin/*.js",
         "test": "npm run lint && tap test/*.js"
     },
-    "version": "3.1.0"
+    "version": "3.1.0",
+    "bin": {}
 }
 ```
 
